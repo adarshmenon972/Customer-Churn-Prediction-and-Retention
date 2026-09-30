@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churnguard"
+version = "1.0.0"
+description = "End-to-end customer churn prediction, explainability and retention-ROI optimisation"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas", "numpy", "scikit-learn", "lightgbm", "optuna", "shap",
+  "matplotlib", "joblib", "fastapi", "uvicorn", "pydantic",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
